@@ -64,43 +64,43 @@ const HomeFiveMain = () => {
       <div id="smooth-wrapper">
         <div id="smooth-content">
           <main>
-
+           <p>Home 5</p>
             {/* header area start */}
-            <HeaderFive />
+            {/* <HeaderFive /> */}
             {/* header area end */}
 
             {/* hero area start */}
-            <HeroBannerFive />
+            {/* <HeroBannerFive /> */}
             {/* hero area end */}
 
             {/* about area start */}
-            <AboutFour />
+            {/* <AboutFour /> */}
             {/* about area end */}
 
             {/* project area start */}
-            <ProjectFive />
+            {/* <ProjectFive /> */}
             {/* project area end */}
 
             {/* counter area start */}
-            <CounterOne />
+            {/* <CounterOne /> */}
             {/* counter area end */}
 
             {/* mission area start */}
-            <MissionOne />
+            {/* <MissionOne /> */}
             {/* mission area end */}
 
             {/* service area start */}
-            <ServiceFive />
+            {/* <ServiceFive /> */}
             {/* service area end */}
 
             {/* blog area start */}
-            <BlogOne />
+            {/* <BlogOne /> */}
             {/* blog area end */}
 
           </main>
 
           {/* footer area */}
-          <FooterFive />
+          {/* <FooterFive /> */}
           {/* footer area */}
         </div>
       </div>

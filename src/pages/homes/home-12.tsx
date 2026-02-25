@@ -34,17 +34,18 @@ const HomeTwelveMain = () => {
       {/* magic cursor end */}
 
       {/* header area start */}
-      <HeaderEight container="1800" />
+      {/* <HeaderEight container="1800" /> */}
       {/* header area end */}
 
       <main>
         {/* portfolio slider start */}
-        <PortfolioSliderHomeTwelve />
+        {/* <PortfolioSliderHomeTwelve /> */}
         {/* portfolio slider end */}
+        <p>Home 12</p>
       </main>
 
       {/* theme switcher */}
-      <ThemeSetting/>
+      {/* <ThemeSetting/> */}
       {/* theme switcher */}
     </div>
   );

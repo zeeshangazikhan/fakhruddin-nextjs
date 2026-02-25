@@ -34,12 +34,13 @@ const HomeNineMain = () => {
             className={`tp-porfolio-10-main ${whiteCls ? "header-white" : ""}`}
           >
             {/* header area start */}
-            <HeaderEight style_2={true} container="1685" />
+            {/* <HeaderEight style_2={true} container="1685" /> */}
             {/* header area end */}
 
             <main>
+              <p>Home 9</p>
               {/* portfolio slider start */}
-              <PortfolioSliderHomeNine setWhiteCls={setWhiteCls} />
+              {/* <PortfolioSliderHomeNine setWhiteCls={setWhiteCls} /> */}
               {/* portfolio slider end */}
             </main>
           </div>
@@ -47,7 +48,7 @@ const HomeNineMain = () => {
       </div>
 
       {/* theme switcher */}
-      <ThemeSetting />
+      {/* <ThemeSetting /> */}
       {/* theme switcher */}
     </div>
   );

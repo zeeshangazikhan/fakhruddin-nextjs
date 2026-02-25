@@ -16,17 +16,18 @@ const HomeTenMain = () => {
   return (
     <div>
       {/* header area start */}
-      <HeaderNine />
+      {/* <HeaderNine /> */}
       {/* header area end */}
 
       <main>
         {/* portfolio slider start */}
-        <PortfolioSliderHomeTen />
+        {/* <PortfolioSliderHomeTen /> */}
         {/* portfolio slider end */}
+        <p>Home 10</p>
       </main>
 
       {/* theme switcher */}
-      <ThemeSetting />
+      {/* <ThemeSetting /> */}
       {/* theme switcher */}
     </div>
   );

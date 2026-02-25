@@ -36,7 +36,7 @@ const HomeSevenMain = () => {
   return (
     <Wrapper>
       {/* header area start */}
-      <HeaderSeven />
+      {/* <HeaderSeven /> */}
       {/* header area end */}
 
       <div id="smooth-wrapper">
@@ -44,31 +44,34 @@ const HomeSevenMain = () => {
           <main>
             <div className="tp-studio-right-layout">
               {/* hero area start */}
-
+              {/* <HeroBannerSeven /> */}
               {/* hero area end */}
 
               <section className="tp-project-2-area">
                 <div className="panels-2 p-relative fix">
                   <div className="panels-container-2 d-flex align-items-center">
 
+
+                    <p>Home 7</p>
+
                     {/* panel one start */}
-                    <StudioPanelOne/>
+                    {/* <StudioPanelOne/> */}
                     {/* panel one end */}
 
                     {/* panel two start */}
-                    <StudioPanelTwo/>
+                    {/* <StudioPanelTwo/> */}
                     {/* panel two end */}
 
                     {/* panel three start */}
-                    <StudioPanelThree/>
+                    {/* <StudioPanelThree/> */}
                     {/* panel three end */}
 
                     {/* panel four start */}
-                    <StudioPanelFour/>
+                    {/* <StudioPanelFour/> */}
                     {/* panel four end */}
 
                     {/* panel five start */}
-                    <StudioPanelFive/>
+                    {/* <StudioPanelFive/> */}
                     {/* panel five end */}
 
                   </div>

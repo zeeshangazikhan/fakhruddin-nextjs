@@ -19,22 +19,22 @@ const HomeElevenMain = () => {
   return (
     <div>
       {/* header area start */}
-      <HeaderTen />
+      {/* <HeaderTen /> */}
       {/* header area end */}
 
       <div id="smooth-wrapper">
         <div id="smooth-content">
           <main>
             {/* portfolio slider start */}
-            <PortfolioSliderHomeEleven />
+            {/* <PortfolioSliderHomeEleven /> */}
             {/* portfolio slider end */}
 
 
-               <div id="slider-next-section"><AwardOne /></div>
+               {/* <div id="slider-next-section"><AwardOne /></div> */}
             {/* award area */}
 
        
-         
+         <p>Home 11</p>
            
           </main>
              

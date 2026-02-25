@@ -45,30 +45,31 @@ const HomeSixMain = () => {
   return (
     <Wrapper>
       {/* header area start */}
-      <HeaderSix />
+      {/* <HeaderSix /> */}
       {/* header area end */}
 
       <div id="smooth-wrapper">
         <div id="smooth-content">
           <main>
+            <p>Home 6</p>
             {/* hero area start */}
-            <HeroBannerSix />
+            {/* <HeroBannerSix /> */}
             {/* hero area end */}
 
             {/* category area start */}
-            <ShopCategory />
+            {/* <ShopCategory /> */}
             {/* category area end */}
 
             {/* shop banner start */}
-            <ShopBanner />
+            {/* <ShopBanner /> */}
             {/* shop banner end */}
 
             {/* shop product start */}
-            <ShopProducts />
+            {/* <ShopProducts /> */}
             {/* shop product end */}
 
             {/* shop banner 2 start */}
-            <div className="tp-shop-banner-area pb-120">
+            {/* <div className="tp-shop-banner-area pb-120">
               <div className="container-fluid">
                 <div className="tp-shop-banner-anim">
                   <Image
@@ -80,20 +81,20 @@ const HomeSixMain = () => {
                   />
                 </div>
               </div>
-            </div>
+            </div> */}
             {/* shop banner 2 end */}
 
             {/* instagram area start */}
-            <InstagramTwo />
+            {/* <InstagramTwo /> */}
             {/* instagram area end */}
 
             {/* brand area start */}
-            <BrandFour />
+            {/* <BrandFour /> */}
             {/* brand area end */}
           </main>
 
           {/* footer area */}
-          <FooterSix />
+          {/* <FooterSix /> */}
           {/* footer area */}
         </div>
       </div>

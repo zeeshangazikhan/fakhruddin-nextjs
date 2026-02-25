@@ -47,50 +47,50 @@ const HomeFourMain = () => {
     <Wrapper>
 
       {/* header area start */}
-      <HeaderFour />
+      {/* <HeaderFour /> */}
       {/* header area end */}
 
       <div id="smooth-wrapper">
         <div id="smooth-content">
           <main>
-
+    <p>Home 4</p>
             {/* hero area start */}
-            <HeroBannerFour />
+            {/* <HeroBannerFour /> */}
             {/* hero area end */}
 
             {/* gallery area start */}
-            <GalleryOne />
+            {/* <GalleryOne /> */}
             {/* gallery area end */}
 
             {/* about area start */}
-            <AboutThree />
+            {/* <AboutThree /> */}
             {/* about area end */}
 
             {/* brand area start */}
-            <BrandThree />
+            {/* <BrandThree /> */}
             {/* brand area end */}
 
 
             {/* project area start */}
-            <ProjectFour />
+            {/* <ProjectFour /> */}
             {/* project area end */}
 
             {/* video area start */}
-            <VideoThree />
+            {/* <VideoThree /> */}
             {/* video area end */}
 
             {/* service area start */}
-            <ServiceFour />
+            {/* <ServiceFour /> */}
             {/* service area end */}
 
             {/* contact area start */}
-            <ContactOne />
+            {/* <ContactOne /> */}
             {/* contact area end */}
 
           </main>
 
           {/* footer area */}
-          <FooterFour />
+          {/* <FooterFour /> */}
           {/* footer area */}
         </div>
       </div>

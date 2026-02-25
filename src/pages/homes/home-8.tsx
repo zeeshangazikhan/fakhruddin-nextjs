@@ -48,15 +48,17 @@ const HomeEightMain = () => {
 
 
       {/* header area start */}
-      <HeaderEight />
+      {/* <HeaderEight /> */}
       {/* header area end */}
 
       <div id="smooth-wrapper">
         <div id="smooth-content">
           <main>
 
+            <p>Home 8</p>
+
             {/* perspective area start */}
-            <PerspectivePortfolioSlider />
+            {/* <PerspectivePortfolioSlider /> */}
             {/* perspective area end */}
 
           </main>
@@ -64,7 +66,7 @@ const HomeEightMain = () => {
       </div>
 
       {/* theme switcher */}
-      <ThemeSetting/>
+      {/* <ThemeSetting/> */}
       {/* theme switcher */}
     </div>
   );

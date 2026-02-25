@@ -208,7 +208,7 @@ export default function PortfolioSliderHomeEleven() {
                             </span>
                             <h4 className="port-showcase-slider-title" style={{ fontSize: item.fontSize, fontWeight: 300, lineHeight: 1.1, letterSpacing: '-2.5px', marginTop: '0px', textTransform: 'uppercase', fontFamily: 'var(--tp-ff-marcellus)', color: '#ffffff', textShadow: '0 4px 20px rgba(0, 0, 0, 0.4)'}}>
                               <Link
-                                href="/portfolio-showcase-details"
+                                href="#"
                                 dangerouslySetInnerHTML={{ __html: item.title }}
                               ></Link>
                             </h4>

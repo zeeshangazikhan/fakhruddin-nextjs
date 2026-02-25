@@ -61,37 +61,38 @@ const HomeThreeMain = () => {
               }}
             >
               {/* hero area start */}
-              <HeroBannerThree />
+              {/* <HeroBannerThree /> */}
               {/* hero area end */}
 
               {/* about area start */}
-              <AboutTwo />
+              {/* <AboutTwo /> */}
               {/* about area end */}
             </div>
 
             {/* service area start */}
-            <ServiceThree />
+            {/* <ServiceThree /> */}
             {/* service area end */}
 
             {/* marquee text */}
-            <LineTextTwo />
+            {/* <LineTextTwo /> */}
             {/* marquee text */}
 
             {/* portfolio area */}
-            <ProjectThree />
+            {/* <ProjectThree /> */}
             {/* portfolio area */}
 
             {/* brand area */}
-            <BrandTwo />
+            {/* <BrandTwo /> */}
             {/* brand area */}
 
             {/* team area */}
-            <TeamTwo />
+            {/* <TeamTwo /> */}
             {/* team area */}
+            <p>Home 14</p>
           </main>
 
           {/* footer area */}
-          <FooterThree />
+          {/* <FooterThree /> */}
           {/* footer area */}
         </div>
       </div>

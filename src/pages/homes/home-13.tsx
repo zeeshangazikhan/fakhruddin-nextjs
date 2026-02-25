@@ -92,41 +92,42 @@ const HomeMain = () => {
           <main>
             
             {/* hero area start */}
-            <HeroBannerOne />
+            {/* <HeroBannerOne /> */}
             {/* hero area end */}
 
             {/* video area */}
-            <VideOne />
+            {/* <VideOne /> */}
             {/* video area */}
 
             {/* brand area */}
-            <BrandOne />
+            {/* <BrandOne /> */}
             {/* brand area */}
 
             {/* service area */}
             <Space height={80} />
-            <ServiceOne />
+            {/* <ServiceOne /> */}
             {/* service area */}
 
             {/* project area */}
-            <ProjectOne />
+            {/* <ProjectOne /> */}
             {/* project area */}
 
             {/* award area */}
-            <AwardOne />
+            {/* <AwardOne /> */}
             {/* award area */}
 
             {/* team area */}
-            <TeamOne />
+            {/* <TeamOne /> */}
             {/* team area */}
 
             {/* testimonial area */}
-            <TestimonialOne />
+            {/* <TestimonialOne /> */}
             {/* testimonial area */}
+            <p>Home 13</p>
           </main>
 
           {/* footer area */}
-          <FooterOne />
+          {/* <FooterOne /> */}
           {/* footer area */}
         </div>
       </div>
