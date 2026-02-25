@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import {
   Syne,
   Aladin,
@@ -84,6 +85,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning={true}>
+      <head>
+        <Script 
+          src="https://code.jquery.com/jquery-4.0.0.min.js"
+          strategy="beforeInteractive"
+        />
+      </head>
       <body
         id="body"
         suppressHydrationWarning={true}
