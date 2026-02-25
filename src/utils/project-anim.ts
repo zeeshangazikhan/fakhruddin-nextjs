@@ -1,9 +1,10 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from '@/plugins';
 
-const $ = typeof window !== "undefined" && typeof (window as any).jQuery !== "undefined" ? (window as any).jQuery : null;
+const getJQ = () => typeof window !== "undefined" ? (window as any).jQuery || (window as any).$ : null;
 
 function projectThreeAnimation() {
+  const $ = getJQ();
   if (document.querySelectorAll(".tp-project-3-area").length > 0) {
     let pw = gsap.matchMedia();
     pw.add("(min-width: 1200px)", () => {

@@ -1,8 +1,9 @@
-const $ = typeof window !== "undefined" && typeof window.jQuery !== "undefined" ? window.jQuery : null;
+const getJQ = () => typeof window !== "undefined" ? (window.jQuery || window.$) : null;
 import { gsap,Power2 } from "gsap";
 
 export default function cursorAnimation() {
-    if(typeof window !== 'undefined'){
+    const $ = getJQ();
+    if(typeof window !== 'undefined' && $){
         if ($("body").not(".is-mobile").hasClass("tp-magic-cursor")) {
             $(".tp-magnetic-item").wrap('<div class="tp-magnetic-wrap"></div>');
             

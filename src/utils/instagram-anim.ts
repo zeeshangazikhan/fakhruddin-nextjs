@@ -1,8 +1,9 @@
 import { gsap } from "gsap";
 
-const $ = typeof window !== "undefined" && typeof (window as any).jQuery !== "undefined" ? (window as any).jQuery : null;
+const getJQ = () => typeof window !== "undefined" ? (window as any).jQuery || (window as any).$ : null;
 
 function instagramAnim() {
+  const $ = getJQ();
   if ($('.tp-instagram-area').length > 0) {
 		let ins = gsap.matchMedia();
 		ins.add("(min-width: 1200px)", () => {

@@ -1,4 +1,4 @@
-const $ = typeof window !== "undefined" && typeof window.jQuery !== "undefined" ? window.jQuery : null;
+const getJQ = () => typeof window !== "undefined" ? (window.jQuery || window.$) : null;
 import * as THREE from 'three'; // Import Three.js
 
 export default class WebGL {
@@ -61,7 +61,8 @@ export default class WebGL {
         (this.camera.fov = (180 / Math.PI) * 2 * Math.atan(1 / (2 * i))), (this.plane.scale.x = this.camera.aspect), (this.plane.scale.y = 1), this.camera.updateProjectionMatrix();
     }
     addObjects() {
-        let e = new THREE.TextureLoader().load($("#showcase-slider-holder").attr("data-pattern-img"));
+        const $ = getJQ();
+        let e = new THREE.TextureLoader().load($ ? $("#showcase-slider-holder").attr("data-pattern-img") : "");
         (e.wrapS = e.wrapT = THREE.RepeatWrapping),
             (this.material = new THREE.ShaderMaterial({
                 uniforms: {

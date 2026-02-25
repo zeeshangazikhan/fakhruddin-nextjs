@@ -1,9 +1,11 @@
 import { gsap, Power2 } from "gsap";
 import { SplitText } from "@/plugins";
 
-const $ = typeof window !== "undefined" && typeof (window as any).jQuery !== "undefined" ? (window as any).jQuery : null;
+// Get jQuery at runtime
+const getJQ = () => typeof window !== "undefined" ? (window as any).jQuery || (window as any).$ : null;
 
 function heroTitleAnim() {
+  const $ = getJQ();
   const heroArea = document.querySelector(".tp-hero-2-area");
   if (heroArea) {
     gsap.set(".tp-hero-2-title.text-1", { x: 300 });
@@ -53,6 +55,7 @@ function heroBgAnimation() {
 
 // bounce animation
 function bounceAnimation() {
+  const $ = getJQ();
   if (!$) return;
   const bounce = document.querySelectorAll(".tp-btn-bounce");
   if (bounce.length > 0) {
@@ -126,6 +129,7 @@ function charAnimation() {
 
 // fade left animation
 function fadeAnimation() {
+  const $ = getJQ();
   if (!$) return;
   if ($(".tp_fade_bottom").length > 0) {
     gsap.set(".tp_fade_bottom", { y: 100, opacity: 0 });
@@ -409,6 +413,7 @@ function revelAnimationTwo() {
 }
 
 function zoomAnimation() {
+  const $ = getJQ();
   if (!$) return;
   // zoom in
   if ($(".anim-zoomin").length > 0) {
@@ -441,6 +446,7 @@ function zoomAnimation() {
 };
 
 function titleAnimation() {
+  const $ = getJQ();
   if (!$) return;
   if ($('.tp_title_anim').length > 0) {
     let splitTitleLines = gsap.utils.toArray(".tp_title_anim");

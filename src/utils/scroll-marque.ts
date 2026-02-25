@@ -1,6 +1,6 @@
 import { gsap } from "gsap";
 
-const $ = typeof window !== "undefined" && typeof (window as any).jQuery !== "undefined" ? (window as any).jQuery : null;
+const getJQ = () => typeof window !== "undefined" ? (window as any).jQuery || (window as any).$ : null;
 
 function teamMarqueAnim() {
   const teamItem = document.querySelector(".tp-team-item");
@@ -52,6 +52,7 @@ function serviceMarqueAnim() {
 
 // home 5 hero 
 function heroScrollTextAnim() {
+  const $ = getJQ();
   let ht = gsap.matchMedia();
   ht.add("(min-width: 576px)", () => {
 

@@ -1,8 +1,9 @@
 import { gsap } from "gsap";
 
-const $ = typeof window !== "undefined" && typeof (window as any).jQuery !== "undefined" ? (window as any).jQuery : null;
+const getJQ = () => typeof window !== "undefined" ? (window as any).jQuery || (window as any).$ : null;
 
 function perspective() {
+  const $ = getJQ();
   if ($(".tp-perspective-slider").length) {
     gsap.set(".tp-perspective-slider .tp-slide .tp-slide-inner", {
       perspective: 60,

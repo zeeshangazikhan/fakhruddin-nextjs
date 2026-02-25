@@ -1,4 +1,4 @@
-const $ = typeof window !== "undefined" && typeof (window as any).jQuery !== "undefined" ? (window as any).jQuery : null;
+const getJQ = () => typeof window !== "undefined" ? (window as any).jQuery || (window as any).$ : null;
 import { gsap } from 'gsap';
 import { SplitText,chroma } from '@/plugins';
 

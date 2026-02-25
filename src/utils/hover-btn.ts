@@ -1,8 +1,9 @@
 import { gsap, Power2 } from "gsap";
 
-const $ = typeof window !== "undefined" && typeof (window as any).jQuery !== "undefined" ? (window as any).jQuery : null;
+const getJQ = () => typeof window !== "undefined" ? (window as any).jQuery || (window as any).$ : null;
 
 function hoverBtn() {
+  const $ = getJQ();
   if (!$) return;
 
   ($('.tp-hover-btn') as any).on('mouseenter', function (this: any, e: any) {

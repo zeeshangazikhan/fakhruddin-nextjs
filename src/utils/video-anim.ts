@@ -1,10 +1,9 @@
 import { gsap } from "gsap";
 import {ScrollTrigger} from '@/plugins';
 
-const $ = typeof window !== "undefined" && typeof (window as any).jQuery !== "undefined" ? (window as any).jQuery : null;
+const getJQ = () => typeof window !== "undefined" ? (window as any).jQuery || (window as any).$ : null;
 
-function videoAnimOne() {
-	if ($('.tp-hero-bottom-img-wrap').length > 0) {
+function videoAnimOne() {  const $ = getJQ();	if ($('.tp-hero-bottom-img-wrap').length > 0) {
 		let ms = gsap.matchMedia();
 		ms.add("(min-width: 768px)", () => {
 			// Home 8

@@ -1,8 +1,9 @@
 import gsap from "gsap";
 
-const $ = typeof window !== "undefined" && typeof (window as any).jQuery !== "undefined" ? (window as any).jQuery : null;
+const getJQ = () => typeof window !== "undefined" ? (window as any).jQuery || (window as any).$ : null;
 
 export function slidePrevTransitionStart() {
+  const $ = getJQ();
   ($('.tp-slider-dot').find('.swiper-pagination-bullet') as any).each(function (this: any) {
     if (!$(this).hasClass("swiper-pagination-bullet-active")) {
       ($('#trigger-slides .swiper-slide-active').find('div').first() as any).each(function (this: any) {
@@ -21,6 +22,7 @@ export function slidePrevTransitionStart() {
 }
 
 export function slideNextTransitionStart() {
+  const $ = getJQ();
   ($('.tp-slider-dot').find('.swiper-pagination-bullet') as any).each(function (this: any) {
     if (!$(this).hasClass("swiper-pagination-bullet-active")) {
       ($('#trigger-slides .swiper-slide-active').find('div').first() as any).each(function (this: any) {

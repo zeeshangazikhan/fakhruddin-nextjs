@@ -1,9 +1,10 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "@/plugins";
 
-const $ = typeof window !== "undefined" && typeof (window as any).jQuery !== "undefined" ? (window as any).jQuery : null;
+const getJQ = () => typeof window !== "undefined" ? (window as any).jQuery || (window as any).$ : null;
 
 function panelOneAnimation() {
+  const $ = getJQ();
   let pp = gsap.matchMedia();
   pp.add("(min-width: 1200px)", () => {
     const panelsSections = gsap.utils.toArray(".panels");
