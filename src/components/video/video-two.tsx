@@ -17,7 +17,7 @@ const VideoTwo = () => {
                 autoPlay={true}
                 playsInline={true}
               >
-               <source src="/assets/video/Treppan Living Privé - Fakhruddin Properties.mp4" type="video/mp4" />
+               <source src="/assets/video/Treppan%20Living%20Priv%C3%A9%20-%20Fakhruddin%20Properties.mp4" type="video/mp4" />
               </video>
               <div className="tp-video-content text-center">
                 <span className="tp-video-subtitle">
