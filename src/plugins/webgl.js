@@ -1,4 +1,4 @@
-import $ from 'jquery';
+const $ = typeof window !== "undefined" && typeof window.jQuery !== "undefined" ? window.jQuery : null;
 import * as THREE from 'three'; // Import Three.js
 
 export default class WebGL {

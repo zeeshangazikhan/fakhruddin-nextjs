@@ -1,16 +1,17 @@
 import gsap from "gsap";
-import $ from "jquery";
+
+const $ = typeof window !== "undefined" && typeof (window as any).jQuery !== "undefined" ? (window as any).jQuery : null;
 
 export function slidePrevTransitionStart() {
-  $('.tp-slider-dot').find('.swiper-pagination-bullet').each(function () {
+  ($('.tp-slider-dot').find('.swiper-pagination-bullet') as any).each(function (this: any) {
     if (!$(this).hasClass("swiper-pagination-bullet-active")) {
-      $('#trigger-slides .swiper-slide-active').find('div').first().each(function () {
+      ($('#trigger-slides .swiper-slide-active').find('div').first() as any).each(function (this: any) {
         if (!$(this).hasClass("active")) {
           $(this).trigger('click');
         }
       });
 
-      $('#trigger-slides .swiper-slide-duplicate-active').find('div').first().each(function () {
+      ($('#trigger-slides .swiper-slide-duplicate-active').find('div').first() as any).each(function (this: any) {
         if (!$(this).hasClass("active")) {
           $(this).trigger('click');
         }
@@ -20,15 +21,15 @@ export function slidePrevTransitionStart() {
 }
 
 export function slideNextTransitionStart() {
-  $('.tp-slider-dot').find('.swiper-pagination-bullet').each(function () {
+  ($('.tp-slider-dot').find('.swiper-pagination-bullet') as any).each(function (this: any) {
     if (!$(this).hasClass("swiper-pagination-bullet-active")) {
-      $('#trigger-slides .swiper-slide-active').find('div').first().each(function () {
+      ($('#trigger-slides .swiper-slide-active').find('div').first() as any).each(function (this: any) {
         if (!$(this).hasClass("active")) {
           $(this).trigger('click');
         }
       });
 
-      $('#trigger-slides .swiper-slide-duplicate-active').find('div').first().each(function () {
+      ($('#trigger-slides .swiper-slide-duplicate-active').find('div').first() as any).each(function (this: any) {
         if (!$(this).hasClass("active")) {
           $(this).trigger('click');
         }

@@ -1,5 +1,6 @@
 import { gsap } from "gsap";
-import $ from "jquery";
+
+const $ = typeof window !== "undefined" && typeof (window as any).jQuery !== "undefined" ? (window as any).jQuery : null;
 
 function instagramAnim() {
   if ($('.tp-instagram-area').length > 0) {

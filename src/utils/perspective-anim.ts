@@ -1,5 +1,6 @@
 import { gsap } from "gsap";
-import $ from "jquery";
+
+const $ = typeof window !== "undefined" && typeof (window as any).jQuery !== "undefined" ? (window as any).jQuery : null;
 
 function perspective() {
   if ($(".tp-perspective-slider").length) {
@@ -8,7 +9,7 @@ function perspective() {
     });
 
     $(".tp-perspective-slider .tp-slide .tp-slide-inner .tp-image").each(
-      function () {
+      function (this: any) {
         let slide = $(this);
 
         gsap.fromTo(

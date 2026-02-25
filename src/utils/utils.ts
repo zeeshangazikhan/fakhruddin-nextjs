@@ -1,4 +1,4 @@
-import $ from 'jquery';
+const $ = typeof window !== "undefined" && typeof (window as any).jQuery !== "undefined" ? (window as any).jQuery : null;
 import product_data from "@/data/product-data";
 
 // Get max price

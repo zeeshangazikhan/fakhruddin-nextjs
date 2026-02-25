@@ -1,7 +1,8 @@
 
 'use client';
 import { useState, useEffect, useRef } from 'react';
-import $ from "jquery";
+
+const $ = typeof window !== "undefined" && typeof (window as any).jQuery !== "undefined" ? (window as any).jQuery : null;
 
 const useStickyHeader = (offset = 20) => {
   const [isSticky, setIsSticky] = useState(false);

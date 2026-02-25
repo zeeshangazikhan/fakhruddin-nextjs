@@ -1,4 +1,4 @@
-import $ from "jquery";
+const $ = typeof window !== "undefined" && typeof window.jQuery !== "undefined" ? window.jQuery : null;
 import { gsap,Power2 } from "gsap";
 
 export default function cursorAnimation() {

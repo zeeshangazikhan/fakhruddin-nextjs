@@ -1,8 +1,11 @@
-import $ from "jquery";
 import { gsap, Power2 } from "gsap";
-function hoverBtn() {
 
-  $('.tp-hover-btn').on('mouseenter', function (e: any) {
+const $ = typeof window !== "undefined" && typeof (window as any).jQuery !== "undefined" ? (window as any).jQuery : null;
+
+function hoverBtn() {
+  if (!$) return;
+
+  ($('.tp-hover-btn') as any).on('mouseenter', function (this: any, e: any) {
     let x = e.pageX - $(this).offset()!.left;
     let y = e.pageY - $(this).offset()!.top;
 
@@ -12,7 +15,7 @@ function hoverBtn() {
     });
   });
 
-  $('.tp-hover-btn').on('mouseout', function (e: any) {
+  ($('.tp-hover-btn') as any).on('mouseout', function (this: any, e: any) {
     let x = e.pageX - $(this).offset()!.left;
     let y = e.pageY - $(this).offset()!.top;
 
@@ -26,7 +29,7 @@ function hoverBtn() {
 
   const hoverBtnItem: any = gsap.utils.toArray(".tp-hover-btn-item");
   hoverBtns.forEach((btn: any, i) => {
-    $(btn).mousemove(function (e) {
+    $(btn).mousemove(function (this: any, e: any) {
       callParallax(e);
     });
     function callParallax(e: any) {
@@ -45,7 +48,7 @@ function hoverBtn() {
         ease: Power2.easeOut,
       });
     }
-    $(btn).mouseleave(function (e) {
+    $(btn).mouseleave(function (this: any, e: any) {
       gsap.to(hoverBtnItem[i], {
         duration: 1,
         x: 0,

@@ -1,6 +1,7 @@
 import { gsap } from "gsap";
-import $ from "jquery";
 import { ScrollTrigger } from '@/plugins';
+
+const $ = typeof window !== "undefined" && typeof (window as any).jQuery !== "undefined" ? (window as any).jQuery : null;
 
 function projectThreeAnimation() {
   if (document.querySelectorAll(".tp-project-3-area").length > 0) {

@@ -1,6 +1,7 @@
 import { gsap } from "gsap";
-import $ from "jquery";
 import { ScrollTrigger } from "@/plugins";
+
+const $ = typeof window !== "undefined" && typeof (window as any).jQuery !== "undefined" ? (window as any).jQuery : null;
 
 function panelOneAnimation() {
   let pp = gsap.matchMedia();
