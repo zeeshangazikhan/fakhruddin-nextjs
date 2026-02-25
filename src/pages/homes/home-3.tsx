@@ -45,6 +45,17 @@ const HomeFourteenMain = () => {
     }
   }, []);
 
+  useEffect(() => {
+    if (headerVisible) {
+      document.body.style.overflow = "auto";
+    } else {
+      document.body.style.overflow = "hidden";
+    }
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [headerVisible]);
+
   useGSAP(() => {
     const timer = setTimeout(() => {
       // hero animation

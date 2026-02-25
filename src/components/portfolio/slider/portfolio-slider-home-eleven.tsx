@@ -145,7 +145,7 @@ export default function PortfolioSliderHomeEleven() {
           zIndex: -1,
         }}
       >
-        <source src="/assets/video/Treppan%20Living%20Prive%20-%20New%20Video.mp4" type="video/mp4" />
+        <source src="/assets/video/Treppan%20Living%20Priv%C3%A9%20-%20Fakhruddin%20Properties.mp4" type="video/mp4" />
       </video>
       {/* Overlay to darken video for better text readability */}
       <div

@@ -15,6 +15,7 @@ export default function HeaderFourteen({ visible = true }: Props) {
     <header
       className="tp-header-height z-index-5"
       style={{
+        display: visible ? "block" : "none",
         transition: "opacity 1.6s cubic-bezier(0.33, 1, 0.68, 1) 0.15s, transform 1.6s cubic-bezier(0.33, 1, 0.68, 1) 0.15s",
         opacity: visible ? 1 : 0,
         transform: visible ? "translateY(0)" : "translateY(-25px)",

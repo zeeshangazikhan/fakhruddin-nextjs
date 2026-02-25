@@ -55,9 +55,8 @@ export default function PortfolioSliderHomeFourteen({ onIntroComplete }: Props) 
   const [phase, setPhase] = useState<"init" | "logo" | "properties" | "hold" | "fadeout" | "reveal">("init");
 
   useEffect(() => {
-    // Tiny delay before starting logo animation for page paint
-    const t0 = setTimeout(() => setPhase("logo"), 150);
-    return () => clearTimeout(t0);
+    // Start logo animation immediately (no delay)
+    setPhase("logo");
   }, []);
 
   useEffect(() => {
@@ -125,6 +124,7 @@ export default function PortfolioSliderHomeFourteen({ onIntroComplete }: Props) 
         loop
         muted
         playsInline
+        preload="auto"
         style={{
           position: "absolute",
           top: 0,
