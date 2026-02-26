@@ -45,7 +45,7 @@ export default function HeaderStickySecond() {
                     width={160}
                     height={50}
                     priority
-                    style={{ filter: "brightness(0)", maxWidth: "60px", width: "100%", height: "auto" }}
+                    style={{ maxWidth: "60px", width: "100%", height: "auto" }}
                   />
                 </Link>
               </div>

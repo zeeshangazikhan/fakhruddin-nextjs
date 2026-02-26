@@ -228,9 +228,9 @@ a, button, [role="button"], [role="link"], label, input[type="submit"], input[ty
   right: 0;
   width: 100%;
   z-index: 9990;
-  background: #ffffff;
+  background: rgba(0, 0, 0, 0.7);
   padding: 15px 80px;
-  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.3);
   transform: translateY(-100%);
   opacity: 0;
   visibility: hidden;
@@ -242,27 +242,27 @@ a, button, [role="button"], [role="link"], label, input[type="submit"], input[ty
     visibility: visible;
   }
 
-  // Force all text & links to black
-  color: #000 !important;
+  // Force all text & links to white
+  color: #ffffff !important;
 
   a,
   button,
   .tp-offcanvas-open-btn span,
   .tp-inner-header-menu nav ul li a {
-    color: #000 !important;
+    color: #ffffff !important;
   }
 
-  // Make hamburger menu icon lines black
+  // Make hamburger menu icon lines white
   .tp-offcanvas-open-btn span svg path,
   .tp-offcanvas-open-btn span svg line,
   .tp-offcanvas-open-btn span svg rect {
-    stroke: #000 !important;
-    fill: #000 !important;
+    stroke: #ffffff !important;
+    fill: #ffffff !important;
   }
 
-  // Logo should be black (dark) in sticky header
+  // Logo should be white in sticky header
   .tp-inner-header-logo img {
-    filter: brightness(0) !important;
+    filter: brightness(0) invert(1) !important;
   }
 
   @media (max-width: 767px) {
