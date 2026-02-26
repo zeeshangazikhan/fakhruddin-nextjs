@@ -90,7 +90,24 @@ a, button, [role="button"], [role="link"], label, input[type="submit"], input[ty
 
 @media (max-width: 1199px) {
   .tp-inner-header-logo.tp-header-logo img {
-    height: 55px !important;
+    height: 32px !important;
+  }
+}
+
+/* Sticky header logo smaller on mobile */
+.tp-sticky-second-header .tp-inner-header-logo.tp-header-logo img {
+  height: 35px !important;
+}
+
+@media (max-width: 991px) {
+  .tp-sticky-second-header .tp-inner-header-logo.tp-header-logo img {
+    height: 28px !important;
+  }
+}
+
+@media (max-width: 575px) {
+  .tp-sticky-second-header .tp-inner-header-logo.tp-header-logo img {
+    height: 24px !important;
   }
 }
 
@@ -180,6 +197,134 @@ a, button, [role="button"], [role="link"], label, input[type="submit"], input[ty
   }
 }
 
+/* Header reveal animation - for home-3 intro */
+.tp-header-reveal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  opacity: 0;
+  transform: translateY(-35px);
+  filter: blur(3px);
+  transition: opacity 1.6s cubic-bezier(0.33, 1, 0.68, 1),
+              transform 1.6s cubic-bezier(0.33, 1, 0.68, 1),
+              filter 1s cubic-bezier(0.33, 1, 0.68, 1);
+  pointer-events: none;
+
+  &.tp-header-revealed {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0px);
+    pointer-events: auto;
+  }
+}
+
+/* Sticky Second Header - appears on scroll down */
+.tp-sticky-second-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 9990;
+  background: #ffffff;
+  padding: 15px 80px;
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.1);
+  transform: translateY(-100%);
+  opacity: 0;
+  visibility: hidden;
+  transition: transform 0.4s ease, opacity 0.4s ease, visibility 0.4s ease;
+
+  &.tp-sticky-second-visible {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  // Force all text & links to black
+  color: #000 !important;
+
+  a,
+  button,
+  .tp-offcanvas-open-btn span,
+  .tp-inner-header-menu nav ul li a {
+    color: #000 !important;
+  }
+
+  // Make hamburger menu icon lines black
+  .tp-offcanvas-open-btn span svg path,
+  .tp-offcanvas-open-btn span svg line,
+  .tp-offcanvas-open-btn span svg rect {
+    stroke: #000 !important;
+    fill: #000 !important;
+  }
+
+  // Logo should be black (dark) in sticky header
+  .tp-inner-header-logo img {
+    filter: brightness(0) !important;
+  }
+
+  @media (max-width: 767px) {
+    padding: 12px 15px;
+  }
+}
+
+/* Service Section - Mobile Responsive */
+.tp-service-area {
+  .tp-service-title-box {
+    margin-bottom: 30px;
+  }
+
+  .tp-section-title {
+    margin-bottom: 32px;
+  }
+}
+
+@media (max-width: 575px) {
+  .tp-service-area {
+    .tp-service-title-box {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .tp-service-right-wrap {
+      text-align: center;
+    }
+
+    .tp-service-item {
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+
+      .tp-service-icon {
+        margin: 0 auto 20px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+
+        img {
+          margin: 0 auto;
+        }
+      }
+
+      .tp-service-content {
+        text-align: center;
+        width: 100%;
+
+        h4 {
+          margin-bottom: 12px;
+        }
+
+        p {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
 /* Award title white color on mobile */
 .award-title-mobile-white {
   color: inherit;
@@ -187,6 +332,110 @@ a, button, [role="button"], [role="link"], label, input[type="submit"], input[ty
 
 .mobile-title-wrap {
   display: none;
+}
+
+/* Award Accordion - wrapper fix for desktop first-child spacing */
+.tp-award-list-wrap .tp-award-accordion-wrapper {
+  .tp-award-list-item {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  &:first-child .tp-award-list-item {
+    padding-top: 0;
+  }
+}
+
+.tp-award-accordion-arrow {
+  display: none;
+}
+
+.tp-award-accordion-body {
+  display: none;
+}
+
+@media (max-width: 991px) {
+  // Hide the desktop thumb column on mobile
+  .tp-award-list-thumb-wrap {
+    display: none !important;
+  }
+
+  // Show accordion arrow on mobile
+  .tp-award-accordion-arrow {
+    display: inline-block !important;
+    font-size: 12px;
+    margin-left: 14px;
+    transition: transform 0.35s ease;
+    color: inherit;
+    flex-shrink: 0;
+  }
+
+  // Fix award row alignment on mobile
+  .tp-award-list-item {
+    cursor: pointer;
+    flex-wrap: nowrap;
+    gap: 8px;
+    padding: 18px 0;
+  }
+
+  .tp-award-list-content-left {
+    flex: 1;
+    min-width: 0;
+
+    span {
+      margin-right: 12px !important;
+      flex-shrink: 0;
+      font-size: 14px !important;
+    }
+
+    p {
+      font-size: 14px !important;
+      line-height: 1.3 !important;
+      white-space: normal;
+      word-break: break-word;
+    }
+  }
+
+  .tp-award-list-content-right {
+    flex-shrink: 0;
+    white-space: nowrap;
+    text-align: right;
+
+    span {
+      font-size: 13px !important;
+    }
+  }
+
+  // Accordion body — hidden by default, smooth expand
+  .tp-award-accordion-body {
+    display: block;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.45s cubic-bezier(0.33, 1, 0.68, 1),
+                padding 0.35s ease,
+                opacity 0.35s ease;
+    opacity: 0;
+    padding: 0 15px;
+  }
+
+  .tp-award-accordion-img {
+    padding: 15px 0 20px;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  // Open state
+  .tp-award-accordion-open {
+    .tp-award-accordion-arrow {
+      transform: rotate(180deg);
+    }
+
+    .tp-award-accordion-body {
+      max-height: 400px;
+      opacity: 1;
+      padding: 0 15px 10px;
+    }
+  }
 }
 
 @media (max-width: 575px) {

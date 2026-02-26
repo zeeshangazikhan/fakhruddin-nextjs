@@ -143,7 +143,7 @@ export default function PortfolioSliderHomeFourteen({ onIntroComplete }: Props) 
         />
       </video>
 
-      {/* Overlay — same on both slides */}
+      {/* Overlay — same on both slides (reduced darkness) */}
       <div
         style={{
           position: "absolute",
@@ -151,7 +151,7 @@ export default function PortfolioSliderHomeFourteen({ onIntroComplete }: Props) 
           left: 0,
           width: "100%",
           height: "100%",
-          background: "linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.40) 50%, rgba(0,0,0,0.60) 100%)",
+          background: "linear-gradient(180deg, rgba(0,0,0,0.30) 0%, rgba(0,0,0,0.22) 50%, rgba(0,0,0,0.28) 100%)",
           zIndex: 1,
           pointerEvents: "none",
         }}

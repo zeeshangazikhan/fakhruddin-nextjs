@@ -12,6 +12,7 @@ import HeaderEleven from "@/layouts/headers/header-eleven";
 import HeroBannerThirteen from "@/components/hero-banner/hero-banner-thirteen";
 import FooterThirteen from "@/layouts/footers/footer-thirteen";
 import HeaderTen from "@/layouts/headers/header-ten";
+import HeaderStickySecond from "@/layouts/headers/header-sticky-second";
 import AboutOne from "@/components/about/about-one";
 import VideoTwo from "@/components/video/video-two";
 import Space from "@/components/ui/space";
@@ -77,6 +78,9 @@ const HomeThirteenMain = () => {
       {/* header area start */}
      <HeaderTen />
       {/* header area end */}
+
+      {/* sticky second header - appears on scroll */}
+      <HeaderStickySecond />
 
       <div id="smooth-wrapper">
         <div id="smooth-content">

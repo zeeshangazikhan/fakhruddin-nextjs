@@ -66,7 +66,8 @@ export default function ProjectThree() {
                     style={{
                       position: "absolute",
                       inset: 0,
-                      background: "rgba(0,0,0,0.50)",
+                      // Reduced overlay darkness
+                      background: "rgba(0,0,0,0.20)",
                       zIndex: 1,
                     }}
                   />

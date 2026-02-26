@@ -55,6 +55,12 @@ type IProps = {
 };
 const AwardOne = ({cls="pt-125 pb-125",abStyle=false}: IProps) => {
   const [activeThumb, setActiveThumb] = React.useState(1);
+  const [openAccordion, setOpenAccordion] = React.useState<number | null>(null);
+
+  const handleAccordionToggle = (id: number) => {
+    setOpenAccordion(prev => (prev === id ? null : id));
+  };
+
   return (
     <div className={`tp-award-area ${cls}`}>
       <div className="container container-1630">
@@ -100,16 +106,28 @@ const AwardOne = ({cls="pt-125 pb-125",abStyle=false}: IProps) => {
               {award_data.map((item) => (
                 <div
                   key={item.id}
-                  onMouseEnter={() => setActiveThumb(item.id)}
-                  className="tp-award-list-item d-flex align-items-center justify-content-between tp_fade_bottom"
-                  rel={`tp-award-list-thumb-${item.id}`}
+                  className={`tp-award-accordion-wrapper ${openAccordion === item.id ? 'tp-award-accordion-open' : ''}`}
                 >
-                  <div className="tp-award-list-content-left d-flex align-items-center">
-                    <span>{item.subtitle}</span>
-                    <p>{item.title}</p>
+                  <div
+                    onMouseEnter={() => setActiveThumb(item.id)}
+                    onClick={() => handleAccordionToggle(item.id)}
+                    className="tp-award-list-item d-flex align-items-center justify-content-between tp_fade_bottom"
+                    rel={`tp-award-list-thumb-${item.id}`}
+                  >
+                    <div className="tp-award-list-content-left d-flex align-items-center">
+                      <span>{item.subtitle}</span>
+                      <p>{item.title}</p>
+                    </div>
+                    <div className="tp-award-list-content-right d-flex align-items-center">
+                      <span>{item.date}</span>
+                      <i className="tp-award-accordion-arrow fa-solid fa-chevron-down"></i>
+                    </div>
                   </div>
-                  <div className="tp-award-list-content-right">
-                    <span>{item.date}</span>
+                  {/* Mobile accordion image */}
+                  <div className="tp-award-accordion-body">
+                    <div className="tp-award-accordion-img">
+                      <Image src={item.img} alt={item.title} style={{ width: '100%', height: 'auto', borderRadius: '8px' }} />
+                    </div>
                   </div>
                 </div>
               ))}

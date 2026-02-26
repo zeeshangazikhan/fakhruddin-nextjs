@@ -11,7 +11,8 @@ import Wrapper from "@/layouts/wrapper";
 import HeaderEleven from "@/layouts/headers/header-eleven";
 import HeroBannerThirteen from "@/components/hero-banner/hero-banner-thirteen";
 import FooterThirteen from "@/layouts/footers/footer-thirteen";
-import HeaderFourteen from "@/layouts/headers/header-fourteen";
+import HeaderTen from "@/layouts/headers/header-ten";
+import HeaderStickySecond from "@/layouts/headers/header-sticky-second";
 import AboutOne from "@/components/about/about-one";
 import VideoTwo from "@/components/video/video-two";
 import Space from "@/components/ui/space";
@@ -37,7 +38,8 @@ import PortfolioSliderHomeFourteen from "@/components/portfolio/slider/portfolio
 
 const HomeFourteenMain = () => {
   useScrollSmooth();
-  const [headerVisible, setHeaderVisible] = React.useState(false);
+  const [introDone, setIntroDone] = React.useState(false);
+
   useEffect(() => {
     document.body.classList.add("tp-smooth-scroll");
     return () => {
@@ -45,8 +47,9 @@ const HomeFourteenMain = () => {
     }
   }, []);
 
+  // Block scroll until second slide (Creating Living) appears
   useEffect(() => {
-    if (headerVisible) {
+    if (introDone) {
       document.body.style.overflow = "auto";
     } else {
       document.body.style.overflow = "hidden";
@@ -54,7 +57,7 @@ const HomeFourteenMain = () => {
     return () => {
       document.body.style.overflow = "auto";
     };
-  }, [headerVisible]);
+  }, [introDone]);
 
   useGSAP(() => {
     const timer = setTimeout(() => {
@@ -86,16 +89,21 @@ const HomeFourteenMain = () => {
 
   return (
     <Wrapper showThemeSetting={false}>
-      {/* header area start */}
-    <HeaderFourteen visible={headerVisible} />
+      {/* header area start - animates in with second slide */}
+      <div className={`tp-header-reveal ${introDone ? 'tp-header-revealed' : ''}`}>
+        <HeaderTen />
+      </div>
       {/* header area end */}
+
+      {/* sticky second header - appears on scroll */}
+      <HeaderStickySecond />
 
       <div id="smooth-wrapper">
         <div id="smooth-content">
           <main>
 
 
-             <PortfolioSliderHomeFourteen onIntroComplete={() => setHeaderVisible(true)} />
+             <PortfolioSliderHomeFourteen onIntroComplete={() => setIntroDone(true)} />
             {/* portfolio slider end */}
 
 
