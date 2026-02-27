@@ -35,10 +35,14 @@ import ProjectFour from "@/components/project/project-four";
 import VideoThree from "@/components/video/video-three";
 import AwardOne from "@/components/award/award-one";
 import PortfolioSliderHomeFourteen from "@/components/portfolio/slider/portfolio-slider-home-fourteen";
+import MobileOffcanvasTwo from "@/components/offcanvas/mobile-offcanvas-2";
 
 const HomeFourteenMain = () => {
   useScrollSmooth();
   const [introDone, setIntroDone] = React.useState(false);
+  // Offcanvas state lifted here so MobileOffcanvasTwo renders outside
+  // .tp-header-reveal (which has CSS transform/filter that breaks position:fixed children)
+  const [openOffcanvas, setOpenOffcanvas] = React.useState(false);
 
   useEffect(() => {
     document.body.classList.add("tp-smooth-scroll");
@@ -91,9 +95,18 @@ const HomeFourteenMain = () => {
     <Wrapper showThemeSetting={false}>
       {/* header area start - animates in with second slide */}
       <div className={`tp-header-reveal ${introDone ? 'tp-header-revealed' : ''}`}>
-        <HeaderTen />
+        {/* Pass external offcanvas control so MobileOffcanvasTwo is NOT rendered inside
+            this transformed wrapper (CSS transform/filter breaks position:fixed children) */}
+        <HeaderTen
+          externalOpenOffcanvas={openOffcanvas}
+          externalSetOpenOffcanvas={setOpenOffcanvas}
+        />
       </div>
       {/* header area end */}
+
+      {/* Offcanvas rendered here — outside .tp-header-reveal so position:fixed
+          background panels work correctly without stacking context issues */}
+      <MobileOffcanvasTwo openOffcanvas={openOffcanvas} setOpenOffcanvas={setOpenOffcanvas} />
 
       {/* sticky second header - appears on scroll */}
       <HeaderStickySecond />

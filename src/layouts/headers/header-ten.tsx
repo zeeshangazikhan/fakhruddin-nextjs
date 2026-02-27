@@ -4,8 +4,20 @@ import Link from "next/link";
 import { MenuThree } from "@/components/svg";
 import MobileOffcanvasTwo from "@/components/offcanvas/mobile-offcanvas-2";
 
-export default function HeaderTen() {
-  const [openOffCanvas, setOpenOffcanvas] = React.useState(false);
+type IHeaderTenProps = {
+  /** When provided, offcanvas state is managed externally (no internal MobileOffcanvasTwo rendered) */
+  externalOpenOffcanvas?: boolean;
+  externalSetOpenOffcanvas?: React.Dispatch<React.SetStateAction<boolean>>;
+};
+
+export default function HeaderTen({ externalOpenOffcanvas, externalSetOpenOffcanvas }: IHeaderTenProps = {}) {
+  const [internalOpen, setInternalOpen] = React.useState(false);
+
+  // Use external state if provided, otherwise fall back to internal
+  const isExternallyControlled = externalOpenOffcanvas !== undefined && externalSetOpenOffcanvas !== undefined;
+  const openOffCanvas = isExternallyControlled ? externalOpenOffcanvas! : internalOpen;
+  const setOpenOffcanvas = isExternallyControlled ? externalSetOpenOffcanvas! : setInternalOpen;
+
   return (
     <>
     <header className="tp-header-height z-index-5">
@@ -48,9 +60,10 @@ export default function HeaderTen() {
       </div>
     </header>
 
-     {/* off canvas */}
-     <MobileOffcanvasTwo openOffcanvas={openOffCanvas} setOpenOffcanvas={setOpenOffcanvas} />
-     {/* off canvas */}
+     {/* off canvas — only rendered here when state is managed internally (home-1, home-2, etc.) */}
+     {!isExternallyControlled && (
+       <MobileOffcanvasTwo openOffcanvas={openOffCanvas} setOpenOffcanvas={setOpenOffcanvas} />
+     )}
     </>
   );
 }
