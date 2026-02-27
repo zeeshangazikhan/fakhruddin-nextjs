@@ -146,7 +146,7 @@ const HomeFourteenMain = () => {
                                 {/* service area start */}
                                           {/* <ServiceThree /> */}
                                           {/* service area end */}
-
+ <Space height={120} />
 
   <div id="slider-next-section"><AwardOne /></div>
                                    

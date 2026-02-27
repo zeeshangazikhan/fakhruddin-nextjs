@@ -29,7 +29,7 @@ const award_data = [
     id: 3,
     img: a_3,
     subtitle: "x1",
-    title: "Fakhruddin Properties - Architectural Design Excellence",
+    title: "Architectural Design Excellence",
     date: "May 24, 2023",
   },
   {
