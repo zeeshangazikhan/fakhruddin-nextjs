@@ -11,14 +11,16 @@ export default function HeaderStickySecond() {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Find the hero/slider section and show sticky header only after it ends
+      // Find the hero/slider section and show sticky header only after it ends.
+      // Use offsetTop + offsetHeight (layout-based) instead of getBoundingClientRect()
+      // to avoid issues with GSAP ScrollSmoother CSS transforms, which cause
+      // getBoundingClientRect() to return stale values when the scrollbar is dragged.
       const heroSection =
         document.getElementById("port-showcase-slider-main") ||
-        document.querySelector(".tp-shop-slider-area");
+        document.querySelector<HTMLElement>(".tp-shop-slider-area");
       if (heroSection) {
-        const heroBottom = heroSection.getBoundingClientRect().bottom;
-        // Show when hero/slider bottom edge scrolls above viewport top
-        setVisible(heroBottom <= 0);
+        const heroBottom = (heroSection as HTMLElement).offsetTop + (heroSection as HTMLElement).offsetHeight;
+        setVisible(window.scrollY >= heroBottom);
       } else {
         // Fallback: show after scrolling 600px if no section found
         setVisible(window.scrollY > 600);
