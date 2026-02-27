@@ -28,7 +28,7 @@ export default function HeaderTen({ externalOpenOffcanvas, externalSetOpenOffcan
               <div className="tp-inner-header-logo tp-header-logo">
                 <Link href="/">
                   <Image 
-                    src="/assets/fakhruddin-img/fakhruddin-logo-f.webp" 
+                    src="/assets/fakhruddin-img/fakhruddin-logo-svg.svg" 
                     alt="Fakhruddin Properties Logo" 
                     width={160} 
                     height={50} 

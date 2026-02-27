@@ -34,10 +34,10 @@ export default function HeaderThirteen({transparent=false,cls=''}: IProps) {
               <div className="col-xl-2 col-lg-6 col-md-6 col-6">
                 <div className="tp-inner-header-logo tp-header-logo">
                   <Link className={`${transparent?'ab-logo-1':'logo-1'}`} href="/">
-                    <Image src="/assets/fakhruddin-img/fakhruddin-logo-f.webp" alt="logo" width={150} height={47} style={{filter: transparent ? undefined : 'brightness(0) invert(1)'}} />
+                    <Image src="/assets/fakhruddin-img/fakhruddin-logo-svg.svg" alt="logo" width={150} height={47} style={{filter: transparent ? undefined : 'brightness(0) invert(1)'}} />
                   </Link>
                   <Link className={`${transparent?'ab-logo-2':'logo-2'}`} href="/">
-                    <Image src="/assets/fakhruddin-img/fakhruddin-logo-f.webp" alt="logo" width={150} height={47} style={{filter: transparent ? undefined : 'brightness(0) invert(1)'}} />
+                    <Image src="/assets/fakhruddin-img/fakhruddin-logo-svg.svg" alt="logo" width={150} height={47} style={{filter: transparent ? undefined : 'brightness(0) invert(1)'}} />
                   </Link>
                 </div>
               </div>

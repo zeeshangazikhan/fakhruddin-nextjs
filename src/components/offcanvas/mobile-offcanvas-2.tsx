@@ -21,7 +21,7 @@ export default function MobileOffcanvasTwo({openOffcanvas,setOpenOffcanvas}:IPro
             <div className="tpoffcanvas__logo">
               <Link className="logo-1" href="/">
                 <Image 
-                  src="/assets/fakhruddin-img/fakhruddin-logo-f.webp" 
+                  src="/assets/fakhruddin-img/fakhruddin-logo-svg.svg" 
                   alt="Fakhruddin Properties Logo" 
                   width={160} 
                   height={50}
@@ -29,7 +29,7 @@ export default function MobileOffcanvasTwo({openOffcanvas,setOpenOffcanvas}:IPro
               </Link>
               <Link className="logo-2" href="/">
                 <Image 
-                  src="/assets/fakhruddin-img/fakhruddin-logo-f.webp" 
+                  src="/assets/fakhruddin-img/fakhruddin-logo-svg.svg" 
                   alt="Fakhruddin Properties Logo" 
                   width={160} 
                   height={50}

@@ -193,7 +193,7 @@ export default function PortfolioSliderHomeFourteen({ onIntroComplete }: Props) 
             }}
           >
             <Image
-              src="/assets/fakhruddin-img/fakhruddin-logo-f.webp"
+              src="/assets/fakhruddin-img/fakhruddin-logo-svg.svg"
               alt="Fakhruddin Properties Logo"
               width={520}
               height={160}

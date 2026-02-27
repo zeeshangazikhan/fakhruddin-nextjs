@@ -17,7 +17,7 @@ export default function FooterThirteen() {
                   <div className="tp-footer-6-logo">
                     <Link href="/">
                       <Image 
-                        src="/assets/fakhruddin-img/fakhruddin-logo-f.webp" 
+                        src="/assets/fakhruddin-img/fakhruddin-logo-svg.svg" 
                         alt="Fakhruddin Logo" 
                         width={150} 
                         height={47} 
